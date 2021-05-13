@@ -1,8 +1,7 @@
 .App {
   font-family: sans-serif;
-  margin-top: 83px;
-  padding-left: 30px;
-  padding-right: 30px;
+  margin: 0;
+  padding: 0;
 }
 
 .input-item {
