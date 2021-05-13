@@ -18,7 +18,7 @@ app.use(
 app.use(express.json());
 app.use(
   session({
-    secret: process.env.APP_SECRET || 'this is the default passphrase',
+    secret: process.env.APP_SECRET || 'secret_key',
     resave: false,
     saveUninitialized: false,
   }),
