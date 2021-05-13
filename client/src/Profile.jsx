@@ -11,8 +11,8 @@ const RandomComponent = () => {
         {/* Pass name from context here */}
         {user && (
           <>
-            <strong>Name</strong>: {user.firstName} {user.lastName}
             <img alt="profile" src={user.photos[0]}></img>
+            <strong>Name</strong>: {user.firstName} {user.lastName}
           </>
         )}
       </h2>

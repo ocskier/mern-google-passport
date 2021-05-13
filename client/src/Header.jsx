@@ -1,11 +1,13 @@
 import React, { useContext } from 'react';
 import { GlobalContext } from './utils/GlobalState';
+import Profile from './Profile';
 import API from './utils/API';
 
 const styles = {
   header: {
     display: 'flex',
-    justifyContent: 'flex-end',
+    justifyContent: 'space-between',
+    marginBottom: '2rem',
     minHeight: 100,
     backgroundColor: 'lightblue',
   },
@@ -13,7 +15,10 @@ const styles = {
 };
 
 const Header = () => {
-  const { setState } = useContext(GlobalContext);
+  const {
+    state: { user },
+    setState,
+  } = useContext(GlobalContext);
   const handleLogout = async () => {
     const response = await API.logout();
     console.log(response.message);
@@ -21,7 +26,8 @@ const Header = () => {
   };
   return (
     <div style={styles.header}>
-      <button onClick={handleLogout}>Logout</button>
+      {user && <Profile />}
+      {user && <button onClick={handleLogout}>Logout</button>}
     </div>
   );
 };
