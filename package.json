@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Full Stack React App with OAuth React and Typescript",
   "main": "./server/server.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no tests installed\" && exit 1",
     "prestart": "npm run tsc",

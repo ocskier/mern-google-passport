@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 mongoose.Promise = global.Promise;
 
 let MONGO_URL;
@@ -22,4 +22,4 @@ db.once('open', () => {
   console.log(`You have successfully connected to your mongo database: ${MONGO_URL}`);
 });
 
-module.exports = db;
+export default db;

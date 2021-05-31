@@ -1,6 +1,8 @@
-const passport = require('passport');
-const GoogleStrategy = require('passport-google-oauth20');
-const db = require('../models');
+import dotenv from 'dotenv';
+dotenv.config();
+import passport from 'passport';
+import GoogleStrategy from 'passport-google-oauth20';
+import db from '../models/index.js';
 
 passport.serializeUser((user, done) => {
   console.log('Serialize ... called!');
@@ -68,4 +70,4 @@ passport.use(
   ),
 );
 
-module.exports = passport;
+export default passport;

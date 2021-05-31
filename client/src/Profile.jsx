@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { GlobalContext } from './utils/GlobalState';
 // This component displays name from Context
-const RandomComponent = () => {
+const RandomComponent = ({header}) => {
   const {
     state: { user },
   } = useContext(GlobalContext);
@@ -11,7 +11,7 @@ const RandomComponent = () => {
         {/* Pass name from context here */}
         {user && (
           <>
-            <img alt="profile" src={user.photos[0]}></img>
+            {header && <img alt="profile" src={user.photos[0]}></img>}
             <strong>Name</strong>: {user.firstName} {user.lastName}
           </>
         )}

@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { HashRouter as Router } from 'react-router-dom';
 import { GoogleLogin } from './GoogleLogin';
 import Header from './Header';
+import Profile from './Profile';
 import UserForm from './UserForm';
 import { GlobalProvider } from './utils/GlobalState';
 import './styles.css';
@@ -25,6 +26,7 @@ function App() {
               </span>
             </h2>
             <p>This profile will show data from the Global Store.</p>
+            <Profile />
           </div>
         </div>
       </Router>

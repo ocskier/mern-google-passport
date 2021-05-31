@@ -26,7 +26,7 @@ const Header = () => {
   };
   return (
     <div style={styles.header}>
-      {user && <Profile />}
+      {user && <Profile header />}
       {user && <button onClick={handleLogout}>Logout</button>}
     </div>
   );

@@ -1,10 +1,12 @@
-require('dotenv').config();
-const express = require('express');
-const morgan = require('morgan');
-const session = require('express-session');
-const passport = require('./passport');
-const routes = require('./routes');
-const dbConnection = require('./db');
+import dotenv from 'dotenv';
+dotenv.config();
+import express from 'express';
+import morgan from 'morgan';
+import session from 'express-session';
+import passport from './passport/index.js';
+import routes from './routes/index.js';
+import dbConnection from './db/index.js';
+
 const app = express();
 const PORT = process.env.PORT || 3001;
 

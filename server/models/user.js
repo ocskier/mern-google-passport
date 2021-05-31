@@ -1,6 +1,6 @@
-const { model, Schema } = require('mongoose');
+import mongoose from 'mongoose';
 
-const userSchema = new Schema({
+const userSchema = new mongoose.Schema({
   googleId: {
     type: String,
     unique: true,
@@ -10,6 +10,6 @@ const userSchema = new Schema({
   photos: [String],
 });
 
-const User = model('User', userSchema);
+const User = mongoose.model('User', userSchema);
 
-module.exports = User;
+export default User;
