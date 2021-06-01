@@ -11,7 +11,7 @@ router.get(
   }),
   (req, res) => {
     console.log('Finished Google auth!');
-    res.redirect(process.env.NODE_ENV === 'development' ? 'http://localhost:3000/' : "https://mern-google-passport.herokuapp.com/");
+    res.redirect(process.env.NODE_ENV === 'development' ? 'http://localhost:3000/' : process.env.PROD_URL);
   },
 );
 
