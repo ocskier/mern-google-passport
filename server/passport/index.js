@@ -1,5 +1,6 @@
 import dotenv from 'dotenv';
 dotenv.config();
+console.log(process.env)
 import passport from 'passport';
 import GoogleStrategy from 'passport-google-oauth20';
 import db from '../models/index.js';
