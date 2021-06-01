@@ -5,7 +5,7 @@ export const GoogleLogin = () => {
   const {
     state: { user },
   } = useContext(GlobalContext);
-  console.log(process.env);
+  console.log(process.env.NODE_ENV);
   return <div>
       {!user && 
         <a href={
