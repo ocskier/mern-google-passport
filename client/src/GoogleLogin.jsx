@@ -9,8 +9,9 @@ export const GoogleLogin = () => {
   return <div>
       {!user && 
         <a href={
-          process.env.NODE_ENV === 'production' ? process.env.PUBLIC_URL + "/auth/google" 
-          : "http://localhost:3001/auth/google"}>
+          process.env.NODE_ENV === 'development' ? 
+            "http://localhost:3001/auth/google" 
+          : process.env.PUBLIC_URL + "/auth/google" }>
           Sign In Google
         </a>
       }
